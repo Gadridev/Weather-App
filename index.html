@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">⚡</div>
+      <button id="theme-toggle" class="theme-btn">
+  <i class="fa-solid fa-moon"></i>
+</button>
+  
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Header -->
+      <header class="header">
+        <div class="search-box">
+          <input type="text" placeholder="Search city..." id="search-input" />
+        </div>
+       
+      </header>
+
+      <!-- Dashboard -->
+      <section class="dashboard">
+        <!-- Left Column -->
+        <div class="left">
+          <!-- Weather Card -->
+          <div class="card weather-main">
+            <div>
+              <span class="location">📍 maroc</span>
+              <h2>Monday</h2>
+              <p class="date">24 Dec, 2023</p>
+              <div class="temp">26°C</div>
+              <p class="range">High: 27 Low: 10</p>
+            </div>
+            <div class="weather-img">
+              <img
+                id="weather-icon"
+                src=""
+                alt="weather icon"
+                aria-hidden="true"
+              />
+              <h3 class="weather-type">Cloudy</h3>
+              <p>Feels Like <span id="feel"></span></p>
+            </div>
+          </div>
+
+          <!-- Forecast -->
+          <div class="card forecast">
+            <h3>Today / Week</h3>
+            <div class="box">
+              <div class="left">
+                <div class="hours">
+                  <div class="hour-card">
+                    1PM <br />
+                    <img
+                      src="https://openweathermap.org/img/wn/11d@2x.png"
+                      alt="thunderstorm"
+                    />20°
+                  </div>
+                  <div class="hour-card">
+                    2PM<br /><img
+                      src="https://openweathermap.org/img/wn/11d@2x.png"
+                      alt="thunderstorm"
+                    />21°
+                  </div>
+                  <div class="hour-card">
+                    3PM<br /><img
+                      src="https://openweathermap.org/img/wn/11d@2x.png"
+                      alt="thunderstorm"
+                    />20°
+                  </div>
+                  <div class="hour-card">
+                    4PM<br />
+                    <img
+                      src="https://openweathermap.org/img/wn/11d@2x.png"
+                      alt="thunderstorm"
+                    />19°
+                  </div>
+                  <div class="hour-card">
+                    5PM<br /><img
+                      src="https://openweathermap.org/img/wn/11d@2x.png"
+                      alt="thunderstorm"
+                    />18°
+                  </div>
+                  <div class="hour-card">
+                    6PM<br /><img
+                      src="https://openweathermap.org/img/wn/11d@2x.png"
+                      alt="thunderstorm"
+                    />18°
+                  </div>
+                </div>
+                <div class="tomorrow-icon">
+                  <img
+                    src="https://openweathermap.org/img/wn/11d@4x.png"
+                    alt="thunderstorm"
+                  />
+                </div>
+                <div class="tomorrow-card">
+                  <div class="tomorrow-left">
+                    <p class="tomorrow-title">Tomorrow</p>
+                    <p class="tomorrow-sub">Thunder storm</p>
+                  </div>
+                  <div class="tomorrow-center">
+                    <span class="tomorrow-temp">14°</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sun-box">
+                <div>
+                  <p>Sunrise</p>
+                  <h4 class="sunrise-1">6:45 AM</h4>
+                </div>
+                <div>
+                  <p>Sunset</p>
+                  <h4 class="sunset-1">5:30 PM</h4>
+                </div>
+                <div>
+                  <p>Length of Day</p>
+                  <h4 class="day-length">10h 45m</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right">
+          <!-- Highlights -->
+          <div class="card highlights">
+            <h3>Today Highlights</h3>
+            <div class="highlight-grid">
+              <div class="mini-card">
+                <div class="humidity">
+                  <h3>Chance of Rain</h3>
+                  <i class="fa-solid fa-cloud-rain"></i>
+                </div>
+                <h1 class="raining">1%</h1>
+              </div>
+              <div class="mini-card">
+                <div class="humidity">
+                  <h3>Visibility</h3>
+                 <i class="fa-solid fa-smog" style="font-size: 42px;"></i>
+                </div>
+                <h1 class="visible"></h1>
+              </div>
+              <div class="mini-card">
+                <div class="humidity">
+                  <h3>Wind Status</h3>
+                  <i class="fa-solid fa-wind"></i>
+                </div>
+                <h1 class="wind-text">40%</h1>
+              </div>
+              <div class="mini-card">
+                <div class="humidity">
+                  <h3>Humidity</h3>
+                  <i class="fa-solid fa-droplet"></i>
+                </div>
+                <h1 class="humidity-text">40%</h1>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Cities -->
+          <div class="card cities">
+            <div class="cities-header">
+              <h3>Other Cities</h3>
+              <button>Show All</button>
+            </div>
+
+            <div class="city-grid">
+             
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
